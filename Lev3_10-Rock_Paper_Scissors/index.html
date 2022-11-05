@@ -10,28 +10,48 @@
   <body>
     <h1>Rock Paper Scissors</h1>
     <section>
-      <div>
+      <div class="box">
         <p>how many rounds?</p>
-        <div onchange="displayRounds()" id="displayRounds">
-          <input type="radio" name="rounds" id="round5" />
+        <div
+          onchange="displayRounds(event)"
+          id="roundSelected"
+          name="roundSelected"
+        >
+          <input type="radio" name="rounds" id="round5" value="5" />
           <label for="round5">5</label>
-          <input type="radio" name="rounds" id="round10" />
+          <input type="radio" name="rounds" id="round10" value="10" />
           <label for="round10">10</label>
-          <input type="radio" name="rounds" id="round15" />
+          <input type="radio" name="rounds" id="round15" value="15" />
           <label for="round15">15</label>
-          <input type="radio" name="rounds" id="round20" />
+          <input type="radio" name="rounds" id="round20" value="20" />
           <label for="round20">20</label>
-          <p id="rounds"></p>
         </div>
+        <p id="rounds" class="numbers"></p>
       </div>
-      <div>
-        <p><span>0</span>:<span>0</span></p>
+      <div class="box">
+        <p class="numbers"><span>0 </span>:<span> 0</span></p>
       </div>
-      <h2>Let's play</h2>
+      <h2 id="results">Let's play</h2>
       <div>
-        <button>Schere</button>
-        <button>Stein</button>
-        <button>Papier</button>
+        <button
+          class="choiceBtn"
+          name="schereSteinPapier"
+          id="schere"
+          value="1"
+        >
+          Schere
+        </button>
+        <button class="choiceBtn" name="schereSteinPapier" id="stein" value="2">
+          Stein
+        </button>
+        <button
+          class="choiceBtn"
+          name="schereSteinPapier"
+          id="papier"
+          value="3"
+        >
+          Papier
+        </button>
       </div>
       <p>MAKE YOUR MOVE.</p>
       <a href="#">restart</a>

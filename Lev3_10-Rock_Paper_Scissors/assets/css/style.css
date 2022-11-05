@@ -17,10 +17,36 @@ a {
 body {
   background-color: rgb(36, 29, 29);
 }
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
 
 h1 {
   background-color: white;
   color: rgb(36, 29, 29);
   padding: 20px;
   width: 100vw;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.box {
+  border: 2px solid white;
+  padding: 20px;
+  margin-bottom: 50px;
+  width: 250px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.numbers {
+  font-size: 40px;
 }

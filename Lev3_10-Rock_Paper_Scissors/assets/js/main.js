@@ -1,34 +1,42 @@
-function displayRounds(event){
-  event.preventDefault{
+// Onchange Event Rundenanzeige
+function displayRounds(event) {
+  event.preventDefault;
 
-    const score = document.getElementById("displayRounds");
-    const round5 = document.getElementById("round5").checked;
-    const round10 = document.getElementById("round10").checked;
-    const round15 = document.getElementById("round15").checked;
-    const round20 = document.getElementById("round20").checked;
-    
+  const rounds = document.getElementById("displayRounds");
 
-    if ()
-
-  }
+  // Variable für Anzeige der Rundenanzahl
+  const roundSelected = Number(
+    document.querySelector('input[name="rounds"]:checked').value
+  );
+  document.getElementById("roundSelected").style.display = "none";
+  document.getElementById("rounds").innerHTML = `0 / ${roundSelected}`;
 }
 
-var button = document.getElementById("clickme"),
-  count = 0;
-button.onclick = function() {
-  count += 1;
-  button.innerHTML = "Click me: " + count;
+const choiceBtns = document.querySelectorAll(".choiceBtn");
+
+// get Value von Buttons Schere/Stein/Papier
+const SchereSteinPapier = Number(
+  document.querySelector('input[name="SchereSteinPapier"]:checked').value
+);
+
+// Computer random Number für Zufallsgenerator
+let randomNumber = Math.floor(Math.random() * 3) + 1;
+
+// if (randomNumber == SchereSteinPapier) {
+//   getElementById("results") = `${}`;
+// }
+
+//Reset
+const Reset = () => {
+  window.location.reload();
 };
 
-
-
-
-
-
-
-
-
-
+// var button = document.getElementById("clickme"),
+//   count = 0;
+// button.onclick = function() {
+//   count += 1;
+//   button.innerHTML = "Click me: " + count;
+// };
 
 // const playerText = document.querySelector("#playerText");
 // const computerText = document.querySelector("#computerText");
